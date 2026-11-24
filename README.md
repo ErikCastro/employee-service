@@ -88,10 +88,6 @@ spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 ```
 
-No publicar credenciales reales en el repositorio. Para un entorno
-compartido o productivo, utilizar variables de entorno o un mecanismo
-seguro de gestión de secretos.
-
 `spring.jpa.hibernate.ddl-auto=update` permite que Hibernate actualice
 el esquema de la base de datos durante el desarrollo.
 
@@ -325,8 +321,6 @@ GET http://localhost:8080/actuator/health
 ```
 
 Un estado `UP` indica que el componente revisado está disponible. La respuesta puede incluir el estado de la aplicación, la conexión a MySQL (`db`) y el espacio en disco (`diskSpace`).
-
-**Nota de seguridad:** `show-details=always` expone detalles de los componentes. Es útil para desarrollo y pruebas locales; en producción se debe restringir el acceso a estos detalles y a los endpoints de Actuator.
 
 ## Colección de Postman
 
